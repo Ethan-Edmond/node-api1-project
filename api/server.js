@@ -4,6 +4,7 @@ const Users = require('./users/model');
 
 const server = express();
 server.use(express.json());
+server.user(cors());
 
 const catch500 = (res) => {
   return (err) => {
