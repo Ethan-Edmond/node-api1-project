@@ -1,10 +1,11 @@
 // BUILD YOUR SERVER HERE
 const express = require('express');
 const Users = require('./users/model');
+const cors = require('cors');
 
 const server = express();
 server.use(express.json());
-server.user(cors());
+server.use(cors());
 
 const catch500 = (res) => {
   return (err) => {
